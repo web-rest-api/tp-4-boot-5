@@ -148,6 +148,12 @@ listBtnsEdit.forEach((btn, i) => {
 			let newTitle = formulaire.title.value
 			let newYear = formulaire.year.value
 			let newImageUrl = formulaire.image.value
+			/*  validation form  */
+			// vide ??
+			if (newTitle === "" || newYear === "" || newImageUrl === "") {
+				alert("no vide !!! ")
+				return
+			}
 			console.log(newTitle, newYear, newImageUrl)
 		})
 	})
