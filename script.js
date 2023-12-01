@@ -44,7 +44,25 @@ gameList.forEach((game, i) => {
     <div class="col">
         <article class="card shadow-sm">
             <img src="${game.imgUrl}" class="card-img-top" alt="${game.title}">
-            ${game.year}
+             <div class="card-body">
+                <h3 class="card-title">${game.title}</h3>
+                <p class="card-text">Year: ${game.title}</p>
+                <div class="btn-group">
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                    >
+                        View
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                    >
+                        Edit
+                    </button>
+                </div>   
+             </div>
+            
         </article>
     </div>
     `
