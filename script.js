@@ -154,6 +154,11 @@ listBtnsEdit.forEach((btn, i) => {
 				alert("no vide !!! ")
 				return
 			}
+			const regexTest = /[A - Za - z0 - 9 ]/
+			if (regexTest.test(newTitle)) {
+				alert("no valid !")
+				return
+			}
 			console.log(newTitle, newYear, newImageUrl)
 		})
 	})
