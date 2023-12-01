@@ -51,12 +51,16 @@ gameList.forEach((game, i) => {
                     <button
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="modal"
+				        data-bs-target="#gameModal"
                     >
                         View
                     </button>
                     <button
                         type="button"
                         class="btn btn-sm btn-outline-secondary"
+                        data-bs-toggle="modal"
+				        data-bs-target="#gameModal"
                     >
                         Edit
                     </button>
