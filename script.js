@@ -143,7 +143,12 @@ listBtnsEdit.forEach((btn, i) => {
         `
 		const saveBtn = document.querySelector(".submit")
 		saveBtn.addEventListener("click", () => {
-			console.log("save data", i)
+			// console.log("save data", i)
+			const formulaire = document.querySelector("form")
+			let newTitle = formulaire.title.value
+			let newYear = formulaire.year.value
+			let newImageUrl = formulaire.image.value
+			console.log(newTitle, newYear, newImageUrl)
 		})
 	})
 })
