@@ -94,5 +94,14 @@ listBtnsView.forEach((btn, i) => {
             <img src="${gameList[i].imgUrl}" alt="${gameList[i].ttile}" class="img-fluid" >
             <p class="mt-2">Year: ${gameList[i].year}</p>
         `
+		modalFooter.innerHTML = `
+            <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+            >
+                Close
+            </button>
+        `
 	})
 })
