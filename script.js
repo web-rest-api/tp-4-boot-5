@@ -38,19 +38,28 @@ const gameList = [
 /*   DOM ELEMENTS */
 const cardContainer = document.querySelector(".row")
 
+/*  modal elements  */
+const modalTitle = document.querySelector(".modal-title ")
+const modalBody = document.querySelector(".modal-body")
+const modalFooter = document.querySelector(".modal-footer")
+
+// modalTitle.innerHTML = "test modal"
+// modalBody.innerHTML = "test du modal body"
+// modalFooter.innerHTML = "test du modal footer"
+
 gameList.forEach((game, i) => {
-	console.log(game.year, i)
+	// console.log(game.year, i)
 	cardContainer.innerHTML += `
     <div class="col">
         <article class="card shadow-sm">
             <img src="${game.imgUrl}" class="card-img-top" alt="${game.title}">
              <div class="card-body">
                 <h3 class="card-title">${game.title}</h3>
-                <p class="card-text">Year: ${game.title}</p>
+                <p class="card-text">Year: ${game.year}</p>
                 <div class="btn-group">
                     <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-dark view"
                         data-bs-toggle="modal"
 				        data-bs-target="#gameModal"
                     >
@@ -58,7 +67,7 @@ gameList.forEach((game, i) => {
                     </button>
                     <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-dark"
                         data-bs-toggle="modal"
 				        data-bs-target="#gameModal"
                     >
@@ -70,4 +79,14 @@ gameList.forEach((game, i) => {
         </article>
     </div>
     `
+})
+
+/*  butttons array  */
+const listBtnsView = document.querySelectorAll(".view")
+
+listBtnsView.forEach((btn, i) => {
+	btn.addEventListener("click", () => {
+		console.log(gameList[i].title)
+		modalTitle.innerHTML = gameList[i].title
+	})
 })
