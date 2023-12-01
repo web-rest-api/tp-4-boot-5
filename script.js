@@ -12,6 +12,28 @@ const gameList = [
 		imgUrl:
 			"https://wp.inews.co.uk/wp-content/uploads/2023/08/EA-Sports-FC-24-scaled-1.jpeg?resize=640,360&strip=all&quality=90",
 	},
+	{
+		title: "God of War",
+		year: 2018,
+		imgUrl:
+			"https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/95a1-god_of_war_4.jpeg",
+	},
+	{
+		title: "Call of Duty",
+		year: 2023,
+		imgUrl:
+			"https://animalpolitico.com/_next/image?url=https%3A%2F%2Fap-cdn.sfo3.cdn.digitaloceanspaces.com%2Fuploads%2F2023%2F08%2Fcall-of-duty-modern-warfare-3-como-jugar-revelacion-warzone-1024x683.jpg&w=3840&q=75",
+	},
+	{
+		title: "Fortnite",
+		year: 2017,
+		imgUrl: "https://cdn-uploads.gameblog.fr/img/news/412858_63a0a6d8ce231.jpg",
+	},
+	{
+		title: "Minecraft",
+		year: 2009,
+		imgUrl: "https://cdn-uploads.gameblog.fr/img/news/418221_640097726ba44.jpg",
+	},
 ]
 
 console.log("test 2")
