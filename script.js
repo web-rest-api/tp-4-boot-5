@@ -107,7 +107,12 @@ listBtnsView.forEach((btn, i) => {
 	})
 })
 
+/* 
+   event on edit button
+*/
 
 listBtnsEdit.forEach((btn, i) => {
-    
+	btn.addEventListener("click", () => {
+		console.log("clicke sur edit")
+	})
 })
