@@ -137,9 +137,13 @@ listBtnsEdit.forEach((btn, i) => {
 		modalFooter.innerHTML = `
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                    >Close</button>
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
+                <button type="submit" class="btn btn-primary submit" data-bs-dismiss="modal"
                    >Save</button>
             </form>
         `
+		const saveBtn = document.querySelector(".submit")
+		saveBtn.addEventListener("click", () => {
+			console.log("save data", i)
+		})
 	})
 })
