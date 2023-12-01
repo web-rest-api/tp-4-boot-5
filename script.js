@@ -67,7 +67,7 @@ gameList.forEach((game, i) => {
                     </button>
                     <button
                         type="button"
-                        class="btn btn-sm btn-outline-dark"
+                        class="btn btn-sm btn-outline-dark edit"
                         data-bs-toggle="modal"
 				        data-bs-target="#gameModal"
                     >
@@ -83,6 +83,7 @@ gameList.forEach((game, i) => {
 
 /*  butttons array  */
 const listBtnsView = document.querySelectorAll(".view")
+const listBtnsEdit = document.querySelectorAll(".edit")
 
 /*  add event listeners to view buttons
     and write the game info unto the modal body and header
@@ -104,4 +105,9 @@ listBtnsView.forEach((btn, i) => {
             </button>
         `
 	})
+})
+
+
+listBtnsEdit.forEach((btn, i) => {
+    
 })
