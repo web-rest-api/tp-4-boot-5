@@ -120,8 +120,25 @@ listBtnsEdit.forEach((btn, i) => {
                     <label for="title" class="form-label">Title</label>
                     <input type="text" class="form-control" id="title" aria-describedby="titleHelp" value="${gameList[i].title}">
                 </div>
+
+                <div class="mb-3">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="number" class="form-control" id="year" aria-describedby="titleYear" value="${gameList[i].year}">
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image url</label>
+                    <input type="text" class="form-control" id="image" aria-describedby="titleHelp" value="${gameList[i].imgUrl}">
+                    <img src="${gameList[i].imgUrl}" alt="" class="img-thumbnail w-50" >
+                </div>
              
-                <button type="submit" class="btn btn-primary">Submit</button>
+            
+        `
+		modalFooter.innerHTML = `
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                   >Close</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"
+                   >Save</button>
             </form>
         `
 	})
