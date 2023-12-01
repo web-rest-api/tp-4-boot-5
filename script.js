@@ -84,9 +84,15 @@ gameList.forEach((game, i) => {
 /*  butttons array  */
 const listBtnsView = document.querySelectorAll(".view")
 
+/*  add event listeners to view buttons
+    and write the game info unto the modal body and header
+*/
 listBtnsView.forEach((btn, i) => {
 	btn.addEventListener("click", () => {
-		console.log(gameList[i].title)
 		modalTitle.innerHTML = gameList[i].title
+		modalBody.innerHTML = `
+            <img src="${gameList[i].imgUrl}" alt="${gameList[i].ttile}" class="img-fluid" >
+            <p class="mt-2">Year: ${gameList[i].year}</p>
+        `
 	})
 })
