@@ -113,6 +113,16 @@ listBtnsView.forEach((btn, i) => {
 
 listBtnsEdit.forEach((btn, i) => {
 	btn.addEventListener("click", () => {
-		console.log("clicke sur edit")
+		modalTitle.innerHTML = "You are on edit mode"
+		modalBody.innerHTML = `        
+            <form>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp" value="${gameList[i].title}">
+                </div>
+             
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        `
 	})
 })
