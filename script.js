@@ -35,5 +35,17 @@ const gameList = [
 		imgUrl: "https://cdn-uploads.gameblog.fr/img/news/418221_640097726ba44.jpg",
 	},
 ]
+/*   DOM ELEMENTS */
+const cardContainer = document.querySelector(".row")
 
-console.log("test 2")
+gameList.forEach((game, i) => {
+	console.log(game.year, i)
+	cardContainer.innerHTML += `
+    <div class="col">
+        <article class="card shadow-sm">
+            <img src="${game.imgUrl}" class="card-img-top" alt="${game.title}">
+            ${game.year}
+        </article>
+    </div>
+    `
+})
