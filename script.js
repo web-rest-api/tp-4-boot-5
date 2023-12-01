@@ -155,7 +155,7 @@ listBtnsEdit.forEach((btn, i) => {
 				return
 			}
 			const regexTest = /^[a-zA-Z0-9 ]+$/
-			if (!regexTest.test(newTitle)) {
+			if (!regexTest.test(newTitle) || !regexTest.test(newYear)) {
 				alert("no valid !")
 				return
 			}
