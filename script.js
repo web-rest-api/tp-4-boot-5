@@ -16,7 +16,7 @@ const gameList = [
 		title: "God of War",
 		year: 2018,
 		imgUrl:
-			"https://cdn.dlcompare.com/game_tetiere/upload/gameimage/file/95a1-god_of_war_4.jpeg",
+			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1o6M79HA4A5bd6ddTPVSjCZr6aQcI2QDWqO7AlBNljWaLb73pzDVismW7890T5kKi_Uw&usqp=CAU",
 	},
 	{
 		title: "Call of Duty",
@@ -27,12 +27,14 @@ const gameList = [
 	{
 		title: "Fortnite",
 		year: 2017,
-		imgUrl: "https://cdn-uploads.gameblog.fr/img/news/412858_63a0a6d8ce231.jpg",
+		imgUrl:
+			"https://i.guim.co.uk/img/media/01512e0bd1d78a9a85026844386c02c544c01084/38_0_1200_720/master/1200.jpg?width=1200&quality=85&auto=format&fit=max&s=cef05f7f90efd180648f5aa5ce0d3690",
 	},
 	{
 		title: "Minecraft",
 		year: 2009,
-		imgUrl: "https://cdn-uploads.gameblog.fr/img/news/418221_640097726ba44.jpg",
+		imgUrl:
+			"https://techstory.in/wp-content/uploads/2023/07/Minecraftwallpapersdotcom.jpg",
 	},
 ]
 /*   DOM ELEMENTS */
@@ -154,12 +156,24 @@ listBtnsEdit.forEach((btn, i) => {
 				alert("no vide !!! ")
 				return
 			}
-			const regexTest = /^[a-zA-Z0-9 ]+$/
-			if (!regexTest.test(newTitle) || !regexTest.test(newYear)) {
+			const alphanumericRegex = /^[a-zA-Z0-9/.:-_ 'éùçà(),-=?&]+$/
+			if (
+				!alphanumericRegex.test(newTitle) ||
+				!alphanumericRegex.test(newYear)
+			) {
 				alert("no valid !")
 				return
 			}
-			console.log(newTitle, newYear, newImageUrl)
+			/*  update gameList  */
+			gameList[i].title = newTitle
+			gameList[i].year = newYear
+			gameList[i].imgUrl = newImageUrl
+			console.log(gameList[i])
+
+			/* update DOM */
+			document.querySelectorAll(".card-title")[i].innerHTML = newTitle
+			document.querySelectorAll(".card-text")[i].innerHTML = `Year: ${newYear}`
+			document.querySelectorAll(".card-img-top")[i].src = newImageUrl
 		})
 	})
 })
